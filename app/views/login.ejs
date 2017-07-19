@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../styles/login.css">
+  <title>YliwOnline</title>
+</head>
+<body>
+<div class="vid-container">
+  <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop="" __idm_id__="-83683327">
+    <source src="../images/backgroundvideo.mp4" type="video/mp4">
+  </video>
+  <div class="inner-container">
+  </div>
+</div>
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+  <div>Yliw<span>Online</span></div>
+</div>
+<br>
+<form method="POST" action="/login" class="login">
+  <input id="usrLogin" type="text" placeholder="Username" name="username"><hr>
+  <input type="password" placeholder="Password" name="password"><hr>
+  <button id="login">Login
+  <button id="register" type="reset" onclick="location.href='register';">Register
+</form>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+<script>
+  $('#login').on('click', function () {
+    var usrLog;
+    sessionStorage.setItem('usrLog', $('#usrLogin').val());
+  });
+</script>
+</body>
+</html>
