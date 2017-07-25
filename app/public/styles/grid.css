@@ -1,13 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-
-
-body{
-  background-color: crimson;
+body {
+    background-color: crimson;
 }
 
 .header {
-	border: 1px solid transparent;
+    border: 1px solid transparent;
     padding-left: 30px;
     border-bottom-style: solid;
     border-radius: 5px;
@@ -15,24 +13,25 @@ body{
     font-family: Helvetica;
     letter-spacing: 3px;
     display: flex;
-	font-size: 20px;
-	box-shadow: 0px 0px 20px 18px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    box-shadow: 0px 0px 20px 18px rgba(0, 0, 0, 0.3);
 }
 
 #overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  color: rgba(130, 130, 130, 0.5);
-  font-size: 50px;
-  text-align: center;
-  line-height: 100px;
-      box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    color: rgba(130, 130, 130, 0.5);
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
 }
-.headerpara{
-	font-weight: 100;
+
+.headerpara {
+    font-weight: 100;
     font-size: 2em;
     margin: 0px;
     margin-left: 1%;
@@ -42,20 +41,21 @@ body{
     padding-bottom: 0.3em;
 }
 
-#userWelcome{
-  font-size: 1em;
-  padding-top: 1.2em;
-  /*margin-left: 48em;*/
-  justify-content: flex-end;
+#userWelcome {
+    font-size: 1em;
+    padding-top: 1.2em;
+    /*margin-left: 48em;*/
+    justify-content: flex-end;
 }
 
-.vertical_nos{
-	padding: 0px;
-	margin: 0px;
-	height: 1.29%;
+.vertical_nos {
+    padding: 0px;
+    margin: 0px;
+    height: 1.29%;
 }
+
 .grid {
-	margin: 1em auto;
+    margin: 1em auto;
     border-collapse: separate;
     border-spacing: 3px;
     border-style: solid;
@@ -67,23 +67,24 @@ body{
     padding-left: 2%;
     margin-left: 0px;
     z-index: 1;
-  font-size: 20px;
-      box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
 }
 
-.topnos{
-	color: white;
-	font-family: helvetica;
+.topnos {
+    color: white;
+    font-family: helvetica;
 }
 
-.topnosdiv{
-	position: relative;
+.topnosdiv {
+    position: relative;
     top: 6px;
     left: 3.1%;
     height: 0px;
 }
-.leftnos{
-	color: white;
+
+.leftnos {
+    color: white;
     margin: 0px;
     width: 0.7%;
     position: relative;
@@ -95,18 +96,18 @@ body{
 }
 
 #title {
-  color: #fff;
-  font-family: 'Exo', sans-serif;
-  font-size: 2em;
-  font-weight: 200;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 2em;
+    font-weight: 200;
 }
 
 #title span {
-  color: dodgerblue;
+    color: dodgerblue;
 }
 
 button {
-	cursor: pointer;
+    cursor: pointer;
     width: 21px;
     height: 21px;
     border: 1px solid transparent;
@@ -120,40 +121,40 @@ button {
     padding: 0px;
 }
 
-#logout{
-  width: 120px;
-  height: 35px;
-  float: right;
-  background: #fff;
-  border: 1px solid #fff;
-  cursor: pointer;
-  border-radius: 2px;
-  color: #a18d6c;
-  font-family: 'Exo', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 6px;
-  margin-top: 8px;
-  margin-bottom: 5px;
-  box-shadow: 0px 12px 10px -10px rgba(0,0,0,0.4);
-  transition: all ease-in-out 300ms;
+#logout {
+    width: 120px;
+    height: 35px;
+    float: right;
+    background: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #a18d6c;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    box-shadow: 0px 12px 10px -10px rgba(0, 0, 0, 0.4);
+    transition: all ease-in-out 300ms;
 }
 
 #logout:hover {
-  opacity: 0.8;
-  box-shadow: 0px 27px 10px -20px rgba(0, 0, 0, 0.4);
-  -webkit-transform:;
-  -moz-transform:;
-  -ms-transform:;
-  -o-transform:;
-  transform: translate(0px, -5px);
+    opacity: 0.8;
+    box-shadow: 0px 27px 10px -20px rgba(0, 0, 0, 0.4);
+    -webkit-transform: ;
+    -moz-transform: ;
+    -ms-transform: ;
+    -o-transform: ;
+    transform: translate(0px, -5px);
 }
 
 .clicked {
-    background-color:yellow;
+    background-color: yellow;
 }
 
-a{
-  text-decoration: none;
-  display: inline;
+a {
+    text-decoration: none;
+    display: inline;
 }

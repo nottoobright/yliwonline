@@ -1,10 +1,10 @@
-// // target to give background to
+// target to give background to
 // var $div = document.getElementById("gradient");
-// // rgb vals of the gradients
+// rgb vals of the gradients
 // var gradients = [
-//   { start: [255,0,0], stop: [255,255,0] },
-//   { start: [0,255,0], stop: [0,255,255] },
-//   { start: [0,0,255], stop: [255,0,255] }
+// { start: [255,0,0], stop: [255,255,0] },
+// { start: [0,255,0], stop: [0,255,255] },
+// { start: [0,0,255], stop: [255,0,255] }
 // ];
 // // how long for each transition
 // var transition_time = 1;
@@ -101,5 +101,5 @@
 // // go go go!
 // window.requestAnimationFrame(updateGradient);
 
-//Alternate Background-Color
-//document.body.style.backgroundColor = "lightskyblue";
+// Alternate Background-Color
+// document.body.style.backgroundColor = "lightskyblue";
