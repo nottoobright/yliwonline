@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../styles/register.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <title>YliwOnline</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/register.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>YliwOnline</title>
 </head>
+
 <body>
-<div class="vid-container">
-  <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop="" __idm_id__="-83683327">
+    <div class="vid-container">
+        <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop="" __idm_id__="-83683327">
     <source src="../images/backgroundvideo.mp4" type="video/mp4">
   </video>
-  <div class="inner-container">
-  </div>
-</div>
-<div class="body"></div>
-<div class="grad"></div>
-<div class="header">
-  <div>Yliw<span>Online</span></div>
-</div>
-<br>
-<form method="POST" action="/register" class="login">
-  <input type="text" placeholder="Username" name="username" required><hr>
-  <input type="password" placeholder="Password" name="password" required><hr>
-  <input type="email" placeholder="eg: email@domain.com" name="email" required><hr>
-  <input id="datepicker" placeholder="Date of Birth" name="dob" required><hr>
-  <button id="register">Register</button>
-</form>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="../scripts/date.js"></script>
+        <div class="inner-container">
+        </div>
+    </div>
+    <div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+        <div>Yliw<span>Online</span></div>
+    </div>
+    <br>
+    <form method="POST" action="/register" class="login">
+        <input type="text" placeholder="First Name" name="firstName" required>
+        <hr>
+        <input type="text" placeholder="Last Name" name="lastName">
+        <hr>
+        <input type="text" placeholder="Username" name="username" required>
+        <hr>
+        <input type="password" placeholder="Password" name="password" required>
+        <hr>
+        <input type="email" placeholder="eg: email@domain.com" name="email" required>
+        <hr>
+        <input id="datepicker" placeholder="Date of Birth" name="dob" required>
+        <hr>
+        <input placeholder="Avatar" name="avatar" required>
+        <hr>
+        <button id="register">Register</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../scripts/date.js"></script>
 </body>
+
 </html>

@@ -20,7 +20,7 @@ app.set('view options', {
 });
 app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.urlencoded({ extended: true }));
-mongoose.connect("mongodb://127.0.0.1/yliw");
+mongoose.connect("mongodb://127.0.0.1/yliw-1");
 
 
 //Passport Setup
@@ -44,7 +44,9 @@ app.get("/", isLoggedIn, function(req, res) {
     User.findOne({ username: req.user.username }, function(err, obj) {
         if (err) {
             console.log(err);
-        } else {
+            req.flash("error", "Opps! Something went wrong.");
+
+        } else {;
             //Get dob from the Databse
             var usrDate = new Date(obj.dob);
             //Get today's date
@@ -58,13 +60,10 @@ app.get("/", isLoggedIn, function(req, res) {
 
             var weeksAlive = Math.floor(diffBetweenDays / 7);
             console.log(weeksAlive);
-
-            res.render("grid", { username: req.user.username, dob: obj.dob, week: weeksAlive });
+            res.render("grid", { week: weeksAlive, usr: obj });
         }
     });
 
-
-    // $(document.body).scrollTo(weeksAlive - 52, 1200);
 });
 
 app.get("/login", function(req, res) {
@@ -81,9 +80,18 @@ app.get("/register", function(req, res) {
 
 //Register Model
 app.post("/register", function(req, res) {
-    User.register(new User({ username: req.body.username, email: req.body.email, dob: req.body.dob }), req.body.password, function(err) {
+    User.register(new User({
+        username: req.body.username,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        avatar: req.body.avatar,
+        dob: req.body.dob
+    }), req.body.password, function(err) {
         if (err) {
             console.log(err);
+            req.flash("error", "Opps! Something went wrong.");
+
         } else {
             passport.authenticate('local')(req, res, function() {
                 res.redirect("/");
@@ -102,6 +110,7 @@ app.post("/login", passport.authenticate('local', {
     User.findOne({ username: req.body.username }, function(err, usr) {
         if (err) {
             console.log(err);
+            req.flash("error", "Opps! Something went wrong.");
         } else {
             res.render("grid", { username: usr });
         }
@@ -112,6 +121,17 @@ app.post("/login", passport.authenticate('local', {
 app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/login");
+});
+
+// User Profiles
+app.get("/users/:id", function(req, res) {
+    User.findById(req.params.id, function(err, validUser) {
+        if (err) {
+            req.flash("error", "Opps! Something went wrong.");
+            res.redirect("/");
+        }
+        res.render("show", { user: validUser });
+    });
 });
 
 //Middleware
